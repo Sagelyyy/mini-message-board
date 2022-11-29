@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div(class="hero")
+    h1= title
+    p Welcome to #{title}
+
+  form(class="formBtn" action="/new" method="GET")
+    button(class="post btn blue") New Post
+
+  div(class="messages")
+    ul
+      each val in messages
+        li= val.user + ' ' + val.added
+        li= val.text
+        hr

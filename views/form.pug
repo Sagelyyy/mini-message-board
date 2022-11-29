@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div(class="hero")
+    h1= title
+    p Welcome to #{title}
+
+  form(class="formBtn" action="/" method="GET")
+    button(class="post btn blue") Home
+
+  form(method="POST" action="/new")
+    input(type="text" placeholder="Author" name="user")
+    textarea(placeholder="Message" name="text", cols="30", rows="10") 
+    button(class="btn blue") submit
